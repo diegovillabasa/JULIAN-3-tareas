@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Ejercicio 2 - Progress</title>
+</head>
+<body>
+
+    <p>
+        Cargando archivo
+        <progress id="barra" value="0" max="100">0%</progress>
+    </p>
+    <script>
+        const barra = document.getElementById("barra");
+        let progreso = 0;
+        setInterval(function () {
+            progreso += 10;
+            barra.value = progreso;
+            barra.textContent = progreso + "%";
+            if (progreso >= 100) {
+                progreso = 0;
+            }
+        }, 500);
+   
+    </script>
+
+</body>
+</html>
+
