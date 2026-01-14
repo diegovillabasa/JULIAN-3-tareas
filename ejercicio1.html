@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Ejercicio 1 - Dialog</title>
+    <style>
+        dialog {
+            border: 2px solid #333;
+            border-radius: 10px;
+            padding: 20px;
+            width: 300px;
+        }
+
+        button {
+            padding: 5px 10px;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <dialog id="miDialogo">
+        <p>Este es un mensaje en una ventana de diálogo .</p>
+        <button id="cerrar">Cerrar</button>
+    </dialog>
+    <button id="abrir">Abrir diálogo</button>
+    <script>
+        const dialogo = document.getElementById("miDialogo");
+        document.getElementById("abrir").onclick = function () {
+            dialogo.showModal();
+        };
+
+        document.getElementById("cerrar").onclick = function () {
+            dialogo.close();
+        };
+    </script>
+
+</body>
+</html>
